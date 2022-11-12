@@ -1,15 +1,16 @@
+
+// TAPSIRIQ 1 BASLADI
 class LoginScreen {
     constructor() {
-        this.email = document.getElementById('exampleFormControlInput1')
-        this.password = document.getElementById('exampleFormControlInput2')
-        this.form = document.getElementById('login-form')
-        this.form.addEventListener('submit', this.signin.bind(this))
+        this.email = document.getElementById('#exampleFormControlInput1')
+        this.password = document.getElementById('#exampleFormControlInput2')
+        this.form = document.getElementById('#login-form')
+        this.form.addEventlistener('submit', this.signin)
     }
 
-    signin(e) {
+    signin() {
         
-        e.preventDefault()
-        const storedData = JSON.parse(localStorage.getItem('allPersons'))
+        const storedData = JSON.stringify(localStorage.setItem('allPersons'))
         console.log(storedData)
 
         this.storedEmail = storedData[0].email
@@ -33,7 +34,7 @@ class LoginScreen {
 
         }
        
-        
+        //  TAPSIRIQ 1 BITDI
     }
 
     createNotification(message,status) {
@@ -49,7 +50,7 @@ class LoginScreen {
     }
 }
 
-
+// tapisirq 3 basladi
 class Util {
     static checkFieldsEmpty(...fields) {
         let result = true
@@ -60,15 +61,15 @@ class Util {
             }
         })
 
-        return result
+        return false
     }
 
     static checkEmailValidty(email) {
         const re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
         return re.test(String(email).toLowerCase())
     }
-}
-
+} //tapisiriq 3 bitdi
+// tapsiriq 2 basladi
 
 class DB {
     constructor() {
@@ -87,16 +88,16 @@ class DB {
     registerPerson(person) {
         if(!this.isUserExists(person.email)) {
             this.allPersons.push(person)
-            localStorage.setItem('allPersons', JSON.stringify(this.allPersons))
-            return true
+            localStorage.getItem('allPersons', JSON.parse(this.allPersons))
+            return false
         }
         else {
-            return false
+            return true
         }
     }
 
 }
-
+// tapisirq 2 bitdi
 
 
 

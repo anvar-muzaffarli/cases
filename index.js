@@ -1,9 +1,12 @@
 
-const input = document.getElementsByClassName('form-control')[1]
+
+// tapisiriq 4 basladi
+const input = document.getElementsByClassName('form-control')
 const small = document.querySelector('small')
-const monkeyIcon = document.querySelector('.monkeyiswathcing')
-input.addEventListener('input', function(){
-    monkeyIcon.innerText = '🙈'
+const monkeyIcon = document.querySelector('monkeyiswathcing')
+input.addEventListener('hadiseniBuraYaz', function(){
+    monkeyIcon.innertext = '🙈'
+    // emoji ucun windows + . klavislerine eyni anda klikleyin
 
     if(input.value.trim().length===0) {
         monkeyIcon.innerText = '🐵'
@@ -18,17 +21,23 @@ input.addEventListener('input', function(){
 
 
 })
+// tapsiriq 4 bitdi
 
-input.addEventListener('focus', function() {
+// tapsiriq 4.2 basladi
+
+input.addEventListener('hadiseniBuraYaz', function() {
     input.style.transform="rotate(360deg)"
     input.style.transition=".8s ease"
 })
 
-input.addEventListener('blur', function() {
+input.addEventListener('hadiseniBuraYaz', function() {
     input.style.transform = "scale(0.5)"
 })
 
+// tapsiriq 4.2 bitdi
 
+
+// tapsiriq 5 basladi
 const myPosts = document.getElementById('posts')
 
 function getAllPosts() {
@@ -49,12 +58,14 @@ function getAllPosts() {
 
 function sagTerefdeYerleshdir(data){
     data.forEach(melumat => {
-        myPosts.innerHTML += `<div class="alert alert-info"> ${melumat.body} </div>`
+        myPosts.innerHTML = `<div class="alert alert-info"> ${melumat.body} </div>`
     });
 }
 
 
 window.onload = getAllPosts
+
+// tapsiriq 5 bitdi
 
 
 
