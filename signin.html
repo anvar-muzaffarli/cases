@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap demo</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+<link rel="stylesheet" href="./index.css">  
+</head>
+  <body>
+    <div class="d-flex justify-content-end">
+      <div class="alert mt-2 me-2 info" role="alert">
+      </div>
+    </div>
+    
+    <div class="d-flex justify-content-center align-items-center">
+        <div class="row all">
+            <form id="login-form" action="#">
+
+
+            <div class="col-12">
+                <div class="mb-3">
+                    <label for="exampleFormControlInput1" class="form-label">Email address</label>
+                    <input type="email" class="form-control " id="exampleFormControlInput1" placeholder="name@example.com">
+                    <span class="text-danger opacity-0">Elektron poçtunuzu düzgün daxil edin</span>
+                  </div>
+            
+                  <div class="mb-3">
+                    <label for="exampleFormControlInput1" class="form-label">Email address</label>
+                    <input type="password" class="form-control" id="exampleFormControlInput2" placeholder="Enter your password">
+                    <span class="text-danger opacity-0">Şifrənizi daxil edin</span>
+                  </div>
+            
+                  <button class="btn btn-info text-white" id="loginbtn" type="submit">Daxil ol</button>
+                  <p>Hələ də hesabın yoxdur ? <a href="./register.html"> Qeydiyyatdan keç</a></p>
+            </div>
+        </form>
+        </div>
+    </div>
+  
+   
+     
+    <script src="./login.js"></script>
+  </body>
+</html>

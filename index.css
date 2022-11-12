@@ -1,0 +1,43 @@
+
+
+.row.all {
+    height: 100vh;
+    align-items: center !important;
+    display: flex !important;
+}
+
+
+
+.info {
+    display: none;
+}
+
+.alert-success {
+    background-color: greenyellow !important;
+}
+
+.input {
+    position: relative;
+}
+
+span {
+    position: absolute;
+    top: 28.5%;
+    right: 1.4%;
+    font-size: 25px;
+}
+
+small {
+    color:red;
+    opacity: 0;
+}
+
+.aktiv {
+    opacity: 1;
+}
+
+.form-control:focus {
+    outline: none !important;
+    border: none !important;
+    border-color:none !important;
+}
